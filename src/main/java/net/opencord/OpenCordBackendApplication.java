@@ -1,9 +1,8 @@
 package net.opencord;
 
+import net.opencord.database.Maria;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import net.opencord.database.Maria;
 
 @SpringBootApplication
 public class OpenCordBackendApplication {

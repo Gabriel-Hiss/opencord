@@ -24,16 +24,16 @@ public class JwtInterceptor implements HandlerInterceptor {
                 String authHeader = request.getHeader("Authorization");
 
                 if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Unauthorized: Token ausente ou formato inválido");
+                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Unauthorized: Missing token or invalid format");
                 }
 
                 String token = authHeader.substring(7);
                 try {
                     if (!jwtTokenUtil.validateToken(token)) {
-                        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Token inválido");
+                        throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid token");
                     }
                 } catch (Exception e) {
-                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Erro na validação do token: " + e.getMessage());
+                    throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Error on token validation: " + e.getMessage());
                 }
             }
         }

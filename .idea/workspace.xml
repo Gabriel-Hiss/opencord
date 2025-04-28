@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="sync again">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/annotation/Jwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/JwtInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/util/JwtTokenUtil.java" afterDir="false" />
+    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="format code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/OpenCordBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/OpenCordBackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/config/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/Security.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +113,7 @@
       <workItem from="1745788958549" duration="1116000" />
       <workItem from="1745792559532" duration="1730000" />
       <workItem from="1745844506172" duration="13242000" />
-      <workItem from="1745874111759" duration="4076000" />
+      <workItem from="1745874111759" duration="4740000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -180,7 +171,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745858262583</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add jwt auth with @jwt annotation">
+      <option name="closed" value="true" />
+      <created>1745878349301</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745878349301</updated>
+    </task>
+    <task id="LOCAL-00009" summary="format code">
+      <option name="closed" value="true" />
+      <created>1745878429546</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745878429546</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +213,8 @@
     <MESSAGE value="update .gitignore" />
     <MESSAGE value="update .gitignore and add workspace.xml" />
     <MESSAGE value="sync again" />
-    <option name="LAST_COMMIT_MESSAGE" value="sync again" />
+    <MESSAGE value="Add jwt auth with @jwt annotation" />
+    <MESSAGE value="format code" />
+    <option name="LAST_COMMIT_MESSAGE" value="format code" />
   </component>
 </project>

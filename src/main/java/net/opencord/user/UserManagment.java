@@ -1,7 +1,6 @@
 package net.opencord.user;
 
 import net.opencord.database.executor.UserManagement;
-
 import net.opencord.util.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserManagment {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
-    
+
     @PostMapping(value = "/register", consumes = "multipart/form-data")
     public ResponseEntity<String> register(
             @RequestParam("username") String username,

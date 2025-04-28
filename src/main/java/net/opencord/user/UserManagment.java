@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.opencord.database.executor.UserManagement;
+
 @RestController
 @RequestMapping("/users/management")
 public class UserManagment {
@@ -17,7 +19,11 @@ public class UserManagment {
             @RequestParam("email") String email
     ) {
 
-        // Need to implement the controler logic first to make all db functions to update here
+        if (UserManagement.userExists(email)) {
+            return ResponseEntity.badRequest().body("User already exists");
+        }
+
+        UserManagement.createUser(username, password, email);
 
         return ResponseEntity.ok("User registered successfully");
     }

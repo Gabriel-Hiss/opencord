@@ -11,6 +11,18 @@ public class UserManagementDB {
         Maria.execute(sql, username, HashUtil.generateHash(password,HashUtil.generateSalt((16))), email);
     }
 
+    public static boolean validateUser(String email, String password) {
+        String sql = "SELECT * FROM users WHERE email = ?";
+        var result = Maria.execute(sql, email);
+
+        if (result.isEmpty()) {
+            return false;
+        }
+
+        String storedPassword = (String) result.get(0).get("password");
+        return HashUtil.verify(password, storedPassword);
+    }
+
     public static boolean userExists(String email) {
         String sql = "SELECT COUNT(*) AS count FROM users WHERE email = ?";
         var result = Maria.execute(sql, email);

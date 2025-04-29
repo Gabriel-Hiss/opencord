@@ -27,7 +27,6 @@ public class Maria {
     }
 
     public static void initialize() {
-        execute("CREATE TABLE IF NOT EXISTS users (uuid CHAR(36) PRIMARY KEY DEFAULT (UUID()), username VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL)");
+        execute("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL)");
     }
-
 }

@@ -47,7 +47,7 @@ public class UserManagment {
             @RequestParam("email") String email,
             @RequestParam("password") String password
     ) {
-        if (!UserManagementDB.userExists(email)) {
+        if (!UserManagementDB.validateUser(email, password)) {
             return ResponseEntity.badRequest().body("Invalid credentials");
         }
         String token = jwtTokenUtil.generateToken(email);

@@ -22,7 +22,7 @@ public class UserManagment {
             @RequestParam("uuid") String uuid
     ) {
 
-        String name = UserManagement.searchUUIDForName(uuid);
+        String name = UserManagementDB.searchUUIDForName(uuid);
 
         if (name == null) {return ResponseEntity.badRequest().body("User not found");}
 

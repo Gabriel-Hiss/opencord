@@ -1,13 +1,14 @@
 package net.opencord.database.executor;
 
 import net.opencord.database.Maria;
-import java.util.UUID;
+import net.opencord.util.HashUtil;
+
 
 public class UserManagementDB {
 
     public static void createUser(String username, String password, String email) {
         String sql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
-        Maria.execute(sql, username, password, email);
+        Maria.execute(sql, username, HashUtil.generateHash(password,HashUtil.generateSalt((16))), email);
     }
 
     public static boolean userExists(String email) {
@@ -57,7 +58,9 @@ public class UserManagementDB {
 
     public static void updateUserPassword(String email, String newPassword) {
         String sql = "UPDATE users SET password = ? WHERE email = ?";
-        Maria.execute(sql, newPassword, email);
+        Maria.execute(sql, HashUtil.generateHash(newPassword,HashUtil.generateSalt((16))), email);
+
+
     }
 
 }

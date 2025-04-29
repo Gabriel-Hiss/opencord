@@ -1,6 +1,7 @@
 package net.opencord.database.executor;
 
 import net.opencord.database.Maria;
+import java.util.UUID;
 
 public class UserManagement {
 
@@ -33,9 +34,25 @@ public class UserManagement {
         return count > 0;
     }
 
+
     public static void deleteUser(String email) {
         String sql = "DELETE FROM users WHERE email = ?";
         Maria.execute(sql, email);
+    }
+
+    public static String searchUUIDForName(String uuid) {
+        String sql = "SELECT * FROM users WHERE uuid = ?";
+        var result = Maria.execute(sql, uuid);
+
+        if (result.isEmpty()) {
+            return null; // or handle user not found
+        }
+
+        try {
+            return (String) result.get(0).get("username");
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     public static void updateUserPassword(String email, String newPassword) {

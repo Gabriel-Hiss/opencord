@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="format code">
+    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="add redis spring support for cache">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/config/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/Security.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/database/Maria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/database/Maria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/database/executor/UserManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/database/executor/UserManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +33,7 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="OpenCord-Backend" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -40,7 +43,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,50 +51,68 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+    &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;Gabriel-Hiss&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Gabriel-Hiss/opencord.git&quot;,
     &quot;accountId&quot;: &quot;5b9353a2-bf95-41f4-bada-ec9626470470&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Security Analysis" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
+    &quot;associatedIndex&quot;: 8
+    }</component>
   <component name="ProjectId" id="2wIRXwREFUUGwcvP0HiD8IiQ1uQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build OpenCord-Backend.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.OpenCordBackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build OpenCord-Backend.executor": "Run",
+    "Gradle.Build opencord.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.OpenCordBackendApplication.executor": "Run",
+    "git-widget-placeholder": "backend",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb",
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="OpenCordBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="OpenCord-Backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.opencord.OpenCordBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -112,8 +132,7 @@
       <workItem from="1745727145308" duration="1684000" />
       <workItem from="1745788958549" duration="1116000" />
       <workItem from="1745792559532" duration="1730000" />
-      <workItem from="1745844506172" duration="13242000" />
-      <workItem from="1745874111759" duration="4740000" />
+      <workItem from="1745844506172" duration="6513000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -139,55 +158,7 @@
       <option name="project" value="LOCAL" />
       <updated>1745792829514</updated>
     </task>
-    <task id="LOCAL-00004" summary="Create Database Support and implement the register route">
-      <option name="closed" value="true" />
-      <created>1745853080759</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1745853080759</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update .gitignore">
-      <option name="closed" value="true" />
-      <created>1745856867614</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1745856867614</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update .gitignore and add workspace.xml">
-      <option name="closed" value="true" />
-      <created>1745858145196</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1745858145196</updated>
-    </task>
-    <task id="LOCAL-00007" summary="sync again">
-      <option name="closed" value="true" />
-      <created>1745858262583</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1745858262583</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Add jwt auth with @jwt annotation">
-      <option name="closed" value="true" />
-      <created>1745878349301</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1745878349301</updated>
-    </task>
-    <task id="LOCAL-00009" summary="format code">
-      <option name="closed" value="true" />
-      <created>1745878429546</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1745878429546</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,12 +180,6 @@
     <MESSAGE value="Create UserManagment.java MariaDB.java and Controler.java to implement full logic i will do it later" />
     <MESSAGE value="add redis spring for fast cache" />
     <MESSAGE value="add redis spring support for cache" />
-    <MESSAGE value="Create Database Support and implement the register route" />
-    <MESSAGE value="update .gitignore" />
-    <MESSAGE value="update .gitignore and add workspace.xml" />
-    <MESSAGE value="sync again" />
-    <MESSAGE value="Add jwt auth with @jwt annotation" />
-    <MESSAGE value="format code" />
-    <option name="LAST_COMMIT_MESSAGE" value="format code" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redis spring support for cache" />
   </component>
 </project>

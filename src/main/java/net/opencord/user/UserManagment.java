@@ -15,6 +15,20 @@ public class UserManagment {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
+
+
+    @PostMapping(value = "/search",consumes = "multipart/form-data")
+    public ResponseEntity<String> searchUser(
+            @RequestParam("uuid") String uuid
+    ) {
+
+        String name = UserManagement.searchUUIDForName(uuid);
+
+        if (name == null) {return ResponseEntity.badRequest().body("User not found");}
+
+        return ResponseEntity.ok(name);
+    }
+
     @PostMapping(value = "/register", consumes = "multipart/form-data")
     public ResponseEntity<String> register(
             @RequestParam("username") String username,

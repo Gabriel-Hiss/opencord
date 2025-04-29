@@ -8,7 +8,7 @@ public class UserManagementDB {
 
     public static void createUser(String username, String password, String email) {
         String sql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
-        Maria.execute(sql, username, HashUtil.generateHash(password,HashUtil.generateSalt((16))), email);
+        Maria.execute(sql, username, HashUtil.generateHash(password, HashUtil.generateSalt((16))), email);
     }
 
     public static boolean validateUser(String email, String password) {
@@ -70,7 +70,7 @@ public class UserManagementDB {
 
     public static void updateUserPassword(String email, String newPassword) {
         String sql = "UPDATE users SET password = ? WHERE email = ?";
-        Maria.execute(sql, HashUtil.generateHash(newPassword,HashUtil.generateSalt((16))), email);
+        Maria.execute(sql, HashUtil.generateHash(newPassword, HashUtil.generateSalt((16))), email);
 
 
     }

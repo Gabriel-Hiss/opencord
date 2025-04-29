@@ -1,6 +1,7 @@
 package net.opencord.util;
 
 import org.bouncycastle.crypto.generators.SCrypt;
+
 import java.security.SecureRandom;
 import java.util.Base64;
 
@@ -35,24 +36,4 @@ public class HashUtil {
         return java.util.Arrays.equals(expectedHash, actualHash);
     }
 
-    /* EXAMPLE
-
-
-    public static void main(String[] args) {
-        String password = "MyStrongPassword123";
-        byte[] salt = generateSalt(16);
-
-        String hash = generateHash(password, salt);
-        System.out.println("Generated hash: " + hash);
-
-        boolean match = verify("MyStrongPassword123", hash);
-        System.out.println("Password correct? " + match);
-
-        boolean wrong = verify("WrongPassword", hash);
-        System.out.println("Wrong password? " + wrong);
-    }
-
-
-
-     */
 }

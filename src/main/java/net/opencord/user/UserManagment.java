@@ -1,6 +1,6 @@
 package net.opencord.user;
 
-import net.opencord.database.executor.UserManagement;
+import net.opencord.database.executor.UserManagementDB;
 import net.opencord.util.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +21,10 @@ public class UserManagment {
             @RequestParam("password") String password,
             @RequestParam("email") String email
     ) {
-        if (UserManagement.userExists(email)) {
+        if (UserManagementDB.userExists(email)) {
             return ResponseEntity.badRequest().body("User already exists");
         }
-        UserManagement.createUser(username, password, email);
+        UserManagementDB.createUser(username, password, email);
         return ResponseEntity.ok("User registered successfully");
     }
 
@@ -33,7 +33,7 @@ public class UserManagment {
             @RequestParam("email") String email,
             @RequestParam("password") String password
     ) {
-        if (!UserManagement.userExists(email)) {
+        if (!UserManagementDB.userExists(email)) {
             return ResponseEntity.badRequest().body("Invalid credentials");
         }
         String token = jwtTokenUtil.generateToken(email);

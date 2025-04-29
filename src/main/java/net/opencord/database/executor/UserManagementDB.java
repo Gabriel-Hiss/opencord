@@ -2,7 +2,7 @@ package net.opencord.database.executor;
 
 import net.opencord.database.Maria;
 
-public class UserManagement {
+public class UserManagementDB {
 
     public static void createUser(String username, String password, String email) {
         String sql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";

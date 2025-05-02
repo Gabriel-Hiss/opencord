@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="format some code">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="add cors mapping">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/FileSize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/OpenCordBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/OpenCordBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/database/executor/UserManagementDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/database/executor/UserManagementDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +94,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -124,7 +127,16 @@
       <workItem from="1745929485036" duration="520000" />
       <workItem from="1745930264154" duration="750000" />
       <workItem from="1745931760563" duration="320000" />
-      <workItem from="1746072801405" duration="832000" />
+      <workItem from="1746072801405" duration="1639000" />
+      <workItem from="1746109354573" duration="214000" />
+      <workItem from="1746132366370" duration="74000" />
+      <workItem from="1746132450578" duration="1669000" />
+      <workItem from="1746137555092" duration="255000" />
+      <workItem from="1746194929404" duration="610000" />
+      <workItem from="1746207020878" duration="6000" />
+      <workItem from="1746207032606" duration="204000" />
+      <workItem from="1746217419965" duration="4039000" />
+      <workItem from="1746221519485" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -230,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745937940140</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add cors mapping">
+      <option name="closed" value="true" />
+      <created>1746073984612</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746073984612</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +282,11 @@
     <MESSAGE value="Remove register jwt auth (i was testing)" />
     <MESSAGE value="fixed some validation issues from login and fully implement hash passwords" />
     <MESSAGE value="format some code" />
-    <option name="LAST_COMMIT_MESSAGE" value="format some code" />
+    <MESSAGE value="add cors mapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cors mapping" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

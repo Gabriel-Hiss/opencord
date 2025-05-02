@@ -71,8 +71,19 @@ public class UserManagementDB {
     public static void updateUserPassword(String email, String newPassword) {
         String sql = "UPDATE users SET password = ? WHERE email = ?";
         Maria.execute(sql, HashUtil.generateHash(newPassword, HashUtil.generateSalt((16))), email);
+    }
 
-
+    public static String getUUIDByEmail(String email) {
+        String sql = "SELECT uuid FROM users WHERE email = ?";
+        var result = Maria.execute(sql, email);
+        if (result.isEmpty()) {
+            return null;
+        }
+        try {
+            return (String) result.get(0).get("uuid");
+        } catch (Exception e) {
+            return null;
+        }
     }
 
 }

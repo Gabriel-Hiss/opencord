@@ -37,11 +37,11 @@ jobs:
       - name: Zip all files in lib/
         run: |
           cd build/libs/
-          zip -r ../output.zip .
+          zip -r ../../output.zip .
         if: success()
 
       - name: Upload lib ZIP as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: lib-jar-output
-          path: lib-jar-output.zip
+          name: output
+          path: output.zip

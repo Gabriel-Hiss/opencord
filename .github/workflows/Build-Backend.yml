@@ -29,6 +29,10 @@ jobs:
 
       - name: Build with Gradle Wrapper
         run: ./gradlew build
+        env:
+          DB_PASS: ${{ secrets.DB_PASS }}
+          DB_URL: ${{ secrets.DB_URL }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
 
       - name: Zip all files in lib/
         run: |

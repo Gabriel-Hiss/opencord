@@ -36,7 +36,7 @@ jobs:
 
       - name: Zip all files in lib/
         run: |
-          cd /build/libs
+          cd build/libs/
           zip -r ../output.zip .
         if: success()
 

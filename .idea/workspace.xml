@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="add cors mapping">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/FileSize.java" afterDir="false" />
+    <list default="true" id="8f72b57f-e926-4cef-a4a2-f95de3c794f9" name="Changes" comment="add avatar routes and file size error on FileSize.java and add max file size limit on application.properties">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/opencord/config/VirtualThreadConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/OpenCordBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/OpenCordBackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/database/executor/UserManagementDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/database/executor/UserManagementDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/opencord/user/UserManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +24,26 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="OpenCord-Backend" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OpenCord-Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OpenCord-Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -79,6 +89,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.Build OpenCord-Backend.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OpenCord-Backend [build].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -94,7 +105,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -103,11 +117,40 @@
     ]
   }
 }</component>
+  <component name="RunManager" selected="Spring Boot.OpenCordBackendApplication">
+    <configuration name="OpenCord-Backend [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.OpenCord-Backend [build]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -136,7 +179,21 @@
       <workItem from="1746207020878" duration="6000" />
       <workItem from="1746207032606" duration="204000" />
       <workItem from="1746217419965" duration="4039000" />
-      <workItem from="1746221519485" duration="19000" />
+      <workItem from="1746221519485" duration="2331000" />
+      <workItem from="1746230161510" duration="705000" />
+      <workItem from="1746240748590" duration="175000" />
+      <workItem from="1746394844567" duration="77000" />
+      <workItem from="1746490853298" duration="499000" />
+      <workItem from="1746550752825" duration="70000" />
+      <workItem from="1746750573076" duration="307000" />
+      <workItem from="1747485880106" duration="103000" />
+      <workItem from="1748003606039" duration="1314000" />
+      <workItem from="1748010882667" duration="3680000" />
+      <workItem from="1748025436765" duration="13000" />
+      <workItem from="1748025457036" duration="35000" />
+      <workItem from="1748035585611" duration="594000" />
+      <workItem from="1748051441574" duration="17000" />
+      <workItem from="1748262703225" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -250,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746073984612</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add avatar routes and file size error on FileSize.java and add max file size limit on application.properties">
+      <option name="closed" value="true" />
+      <created>1746221569683</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746221569683</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +348,8 @@
     <MESSAGE value="fixed some validation issues from login and fully implement hash passwords" />
     <MESSAGE value="format some code" />
     <MESSAGE value="add cors mapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cors mapping" />
+    <MESSAGE value="add avatar routes and file size error on FileSize.java and add max file size limit on application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="add avatar routes and file size error on FileSize.java and add max file size limit on application.properties" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
